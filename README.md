@@ -1,7 +1,8 @@
 Category Swiper
 ====
 
-** Overview
+Overview
+----
 
 Swipe (flick) the page and switch categories
 
