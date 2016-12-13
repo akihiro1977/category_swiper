@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>スワイプ（フリック？）で画面全体のカテゴリを切り替えるアレ</title>
+<meta name="Description" content="">
+
+<!-- vender -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/icomoon/icomoon.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- local -->
+<link rel="stylesheet" type="text/css" href="css/common.css">
+
+<script type="text/javascript" src="js/default.js"></script>
+
+<link rel="stylesheet" type="text/css" href="js/category_swiper.css">
+<script type="text/javascript" src="js/category_swiper.js"></script>
+<script type="text/javascript">
+$(function(){
+	category_swiper.init();
+});
+</script>
+</head>
+<body>
+<header>
+	<div id="header">
+		<h1>CategorySwiper</h1>
+	</div>
+</header>
+<nav>
+	<div id="categories">
+		<ul class="clearfix" data-cs-categories>
+			<li><a href="#about">About</a></li>
+			<li><a href="#use">使い方</a></li>
+			<li><a href="#download">Download</a></li>
+			<li><a href="#other">OtherServices</a></li>
+			<li><a href="#groumet">dummyContents1</a></li>
+			<li><a href="#entertainment">dummyContents2</a></li>
+			<span class="activeBar"></span>
+		</ul>
+	</div>
+</nav>
+<div id="contents" data-cs-content-wrapper>
+	<section>
+		<div id="about" class="cs-content">
+			<div class="container">
+				<h3 class="page-header">スワイプ（フリック？）で画面全体のカテゴリを切り替えるアレ</h3>
+				<p>グノシーとかNewsPicksとかMERYとかby.Sとかのアプリでよく見る、スワイプ（フリック？）で画面全体のカテゴリを切り替えるアレです。</p>
+				<h4>やりたかったこと</h4>
+				<ul>
+					<li>ヘッダ部のカテゴリはスクロールできる</li>
+					<li>選択されたカテゴリがセンターにスクロールする</li>
+					<li>選択されたカテゴリにアクティブ要素（今回の例では黒のアンダーライン）がついてくる</li>
+					<li>全カテゴリがウィンドウ幅に収まるのであれば全体をセンタリングで固定する</li>
+					<li>コンテンツ部をスワイプ（フリック）でカテゴリを切り替える</li>
+				</ul>
+				<div class="media mt40">
+					<div class="media-left">
+						<a href="javascript:;"><img class="media-object" src="//placeholdit.imgix.net/~text?txtsize=20&txt=80×80&w=80&h=80"></a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">ダミータイトル</h4>
+						<p>あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。</p>
+					</div>
+				</div>
+				<div class="media">
+					<div class="media-left">
+						<a href="javascript:;"><img class="media-object" src="//placeholdit.imgix.net/~text?txtsize=20&txt=80×80&w=80&h=80"></a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">ダミータイトル</h4>
+						<p>あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。</p>
+					</div>
+				</div>
+				<div class="media">
+					<div class="media-left">
+						<a href="javascript:;"><img class="media-object" src="//placeholdit.imgix.net/~text?txtsize=20&txt=80×80&w=80&h=80"></a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">ダミータイトル</h4>
+						<p>あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。</p>
+					</div>
+				</div>
+				<div class="media">
+					<div class="media-left">
+						<a href="javascript:;"><img class="media-object" src="//placeholdit.imgix.net/~text?txtsize=20&txt=80×80&w=80&h=80"></a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">ダミータイトル</h4>
+						<p>あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div id="use" class="cs-content">
+			<div class="container">
+				<h3 class="page-header">使い方</h3>
+				<p>jQueryプラグインではありません、ごめんなさい</p>
+				<div class="well">
+				<pre>
+<p>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;js/category_swiper.css&quot;&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/category_swiper.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+$(function(){
+	category_swiper.init();
+});
+&lt;/script&gt;</p>
+<p>&lt;nav&gt;
+  &lt;!-- カテゴリラッパーはCSSでfixedしています --&gt;
+  &lt;div id=&quot;categories&quot;&gt;
+    &lt;!-- カテゴリリストのアンカーとコンテンツIDがひもづいています data-cs-categories は必須です --&gt;
+    &lt;ul class=&quot;clearfix&quot; data-cs-categories&gt;
+      &lt;li&gt;&lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#use&quot;&gt;使い方&lt;/a&gt;&lt;/li&gt;
+      ...
+      &lt;!-- アクティブカテゴリに追随するブロック、デザインはCSSで。 --&gt;
+      &lt;span class=&quot;activeBar&quot;&gt;&lt;/span&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+&lt;!-- コンテンツラッパーは data-cs-content-wrapper 必須 --&gt;
+&lt;div id=&quot;contents&quot; data-cs-content-wrapper&gt;
+  &lt;section&gt;
+    &lt;!-- コンテンツは cs-contentクラスを。ここだけクラスダサいけど。 --&gt;
+    &lt;div id=&quot;about&quot; class=&quot;cs-content&quot;&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/section&gt;
+  &lt;section&gt;
+    &lt;div id=&quot;use&quot; class=&quot;cs-content&quot;&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/section&gt;
+  ...
+&lt;/div&gt;
+</p>
+				</pre>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div id="download" class="cs-content">
+			<div class="container">
+				<h3 class="page-header">Download</h3>
+				<a href="https://github.com/akihiro1977/category_swiper" class="btn btn-xs btn-link" target="_blank">https://github.com/akihiro1977/category_swiper</a>
+				<div class="media mt40">
+					<div class="media-left">
+						<a href="javascript:;"><img class="media-object" src="//placeholdit.imgix.net/~text?txtsize=20&txt=80×80&w=80&h=80"></a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">ダミータイトル</h4>
+						<p>あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。</p>
+					</div>
+				</div>
+				<div class="media">
+					<div class="media-left">
+						<a href="javascript:;"><img class="media-object" src="//placeholdit.imgix.net/~text?txtsize=20&txt=80×80&w=80&h=80"></a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">ダミータイトル</h4>
+						<p>あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。</p>
+					</div>
+				</div>
+				<div class="media">
+					<div class="media-left">
+						<a href="javascript:;"><img class="media-object" src="//placeholdit.imgix.net/~text?txtsize=20&txt=80×80&w=80&h=80"></a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">ダミータイトル</h4>
+						<p>あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。</p>
+					</div>
+				</div>
+				<div class="media">
+					<div class="media-left">
+						<a href="javascript:;"><img class="media-object" src="//placeholdit.imgix.net/~text?txtsize=20&txt=80×80&w=80&h=80"></a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">ダミータイトル</h4>
+						<p>あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div id="other" class="cs-content">
+			<div class="container">
+				<h3 class="page-header">その他の小物サービス</h3>
+				<p>他に書くこと無いので置いときます</p>
+				
+				<dl>
+					<dt><a href="http://labo.i-section.net/touchPhotoViewer/" target="_blank">facebookやtumblrのスマホアプリでよく見る写真をフルスクリーンで見てダブルタップで拡大とかする感じのjQueryを使ったJavaScriptプログラムを試しに書いてみた</a></dt>
+					<dd>いわゆるスマホ用フォトViewer的な</dd>
+				</dl>
+				<dl>
+					<dt><a href="http://labo.i-section.net/hush-hush-hash/" target="_blank">HUSH-HUSH, HASH</a></dt>
+					<dd>こんな感じで #Yahoo の #形態素解析API を使って、#文章 の #名詞 だけを #ハッシュタグ 化して #ツイート します。</dd>
+				</dl>
+				<dl>
+					<dt><a href="http://labo.i-section.net/circled-character-generator/" target="_blank">英数字を丸囲み文字にサクーっと変換するアレ</a></dt>
+					<dd>英数字を丸囲み文字にサクーっと変換するウェブサービスです。<br>
+						Vue.jsの習作です。</dd>
+				</dl>
+				<dl>
+					<dt><a href="http://labo.i-section.net/shakeFlash/" target="_blank">ShakeFlash</a></dt>
+					<dd>iPhoneでアクセスして振ってみてください。画面が光ります。それだけです。</dd>
+				</dl>
+			
+			</div>
+		</div>
+	</section>
+	<section>
+		<div id="groumet" class="cs-content">
+			<div class="container">
+				<h3 class="page-header">dummy contents</h3>
+				<div class="media">
+					<div class="media-left">
+						<a href="javascript:;"><img class="media-object" src="//placeholdit.imgix.net/~text?txtsize=20&txt=80×80&w=80&h=80"></a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">ダミータイトル</h4>
+						<p>あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。</p>
+					</div>
+				</div>
+				<div class="media">
+					<div class="media-left">
+						<a href="javascript:;"><img class="media-object" src="//placeholdit.imgix.net/~text?txtsize=20&txt=80×80&w=80&h=80"></a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">ダミータイトル</h4>
+						<p>あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。</p>
+					</div>
+				</div>
+				<div class="media">
+					<div class="media-left">
+						<a href="javascript:;"><img class="media-object" src="//placeholdit.imgix.net/~text?txtsize=20&txt=80×80&w=80&h=80"></a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">ダミータイトル</h4>
+						<p>あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。</p>
+					</div>
+				</div>
+				<div class="media">
+					<div class="media-left">
+						<a href="javascript:;"><img class="media-object" src="//placeholdit.imgix.net/~text?txtsize=20&txt=80×80&w=80&h=80"></a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">ダミータイトル</h4>
+						<p>あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div id="entertainment" class="cs-content">
+			<div class="container">
+				<h3 class="page-header">dummy contents</h3>
+				<div class="media">
+					<div class="media-left">
+						<a href="javascript:;"><img class="media-object" src="//placeholdit.imgix.net/~text?txtsize=20&txt=80×80&w=80&h=80"></a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">ダミータイトル</h4>
+						<p>あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。</p>
+					</div>
+				</div>
+				<div class="media">
+					<div class="media-left">
+						<a href="javascript:;"><img class="media-object" src="//placeholdit.imgix.net/~text?txtsize=20&txt=80×80&w=80&h=80"></a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">ダミータイトル</h4>
+						<p>あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。</p>
+					</div>
+				</div>
+				<div class="media">
+					<div class="media-left">
+						<a href="javascript:;"><img class="media-object" src="//placeholdit.imgix.net/~text?txtsize=20&txt=80×80&w=80&h=80"></a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">ダミータイトル</h4>
+						<p>あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。</p>
+					</div>
+				</div>
+				<div class="media">
+					<div class="media-left">
+						<a href="javascript:;"><img class="media-object" src="//placeholdit.imgix.net/~text?txtsize=20&txt=80×80&w=80&h=80"></a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">ダミータイトル</h4>
+						<p>あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<footer>
+	<div id="footer">
+		<ul class="snsLinks">
+			<li><a href="http://i-section.net" class="btn btn-gray btn-pill"><span class="glyphicon glyphicon-home"></span></a></li>
+			<li><a href="https://twitter.com/akihiro1977" class="btn btn-twitter btn-pill" target="_blank"><span class="icon icon-twitter"></span></a></li>
+		</ul>
+		<div class="copyright">(c)<a href="http://i-section.net" class="btn btn-link">i-section.net</a></div>
+	</div>
+</footer>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-11170721-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
